@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.yagnenkoff.prj1.ControllerForm">
+   <AnchorPane layoutY="1.0" prefHeight="458.0" prefWidth="232.0">
+      <AnchorPane prefHeight="41.0" prefWidth="232.0" style="-fx-background-color: #8eb4d4;"
+                  AnchorPane.rightAnchor="0.0">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <Label layoutX="43.0" layoutY="12.0" prefHeight="17.0" prefWidth="147.0" text="Дерево найденых файлов"
+                AnchorPane.rightAnchor="42.0"/>
+      </AnchorPane>
+      <AnchorPane layoutY="382.0" prefHeight="77.0" prefWidth="232.0" style="-fx-background-color: #8eb4d4;">
+         <Button fx:id="searchText" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0"
+                 prefWidth="185.0" text="Произвести поиск текста"/>
+      </AnchorPane>
+      <AnchorPane layoutY="41.0" prefHeight="282.0" prefWidth="232.0">
+         <TreeView fx:id="searchTree" prefHeight="341.0" prefWidth="232.0"/>
+         <ProgressIndicator fx:id="progressIndicator" layoutX="93.0" layoutY="131.0" visible="false"/>
+      </AnchorPane>
+   </AnchorPane>
+   <AnchorPane layoutX="230.0" prefHeight="130.0" prefWidth="370.0" style="-fx-background-color: #c5cce3;">
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="25.0" prefWidth="114.0" text="Укажите формат:"/>
+      <Button fx:id="selectDirectory" layoutX="207.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0"
+              prefWidth="114.0" text="Выбрать папку"/>
+      <TextField fx:id="textForSearch" layoutX="136.0" layoutY="56.0" prefHeight="25.0" prefWidth="185.0"/>
+      <Label layoutX="22.0" layoutY="56.0" prefHeight="25.0" prefWidth="106.0" text="Текст для поиска:"/>
+      <TextField fx:id="pathDirectory" layoutX="22.0" layoutY="93.0" onAction="#initialize" prefHeight="25.0"
+                 prefWidth="178.0"/>
+      <TextField fx:id="choiceFormatFile" layoutX="136.0" layoutY="14.0" prefHeight="25.0" prefWidth="185.0"/>
+   </AnchorPane>
+   <TabPane fx:id="textFiles" layoutX="230.0" layoutY="130.0" prefHeight="330.0" prefWidth="370.0"/>
+</AnchorPane>
